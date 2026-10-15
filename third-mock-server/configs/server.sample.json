@@ -1,0 +1,9 @@
+# 服务端配置样例 / server config sample
+# 复制为 server.json 使用；未提供的字段使用内置默认值。
+# Copy to server.json; missing fields fall back to built-in defaults.
+{
+  "listen": ":8680",          # mock 服务与管理页共用监听地址
+  "data_dir": "./data",       # 规则/请求记录存储目录
+  "admin_prefix": "/_admin",  # 管理 API 前缀
+  "mock_prefix": "/mock"      # mock 接口统一前缀，避免与管理路由冲突
+}

@@ -1,0 +1,29 @@
+# 构建产物 / build artifacts
+bin/
+node_modules/
+/third-mock-web/dist/
+
+# 运行时数据（规则/请求记录）/ runtime data
+data/
+*.local.json
+
+# 本地配置 / local config
+configs/*.local.*
+
+# go:embed 前端产物目录：真实构建产物不入库，仅保留 .keep 占位保证空仓库可编译。
+# Frontend dist for go:embed: real build artifacts are not tracked;
+# only the .keep placeholder is tracked so a fresh clone still compiles.
+third-mock-server/internal/static/dist/*
+!third-mock-server/internal/static/dist/.keep
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI 工作目录中的临时文件
+.agents/work/*/tmp/
